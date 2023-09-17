@@ -3,5 +3,6 @@ keboola.utils
 keboola.http-client
 mock
 freezegun
+eth-hash[pycryptodome]
 eth_utils
 etherscan

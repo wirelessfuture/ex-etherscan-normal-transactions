@@ -3,6 +3,4 @@ keboola.utils
 keboola.http-client
 mock
 freezegun
-requests
-requests-cache
-etherscan
+etherscan2

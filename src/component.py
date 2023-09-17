@@ -9,7 +9,6 @@ from typing import List, Dict, Any
 from keboola.component.base import ComponentBase
 from keboola.component.exceptions import UserException
 
-import eth_utils
 import etherscan
 
 # configuration variables
@@ -40,17 +39,6 @@ class Component(ComponentBase):
     def __init__(self) -> None:
         super().__init__()
 
-    @staticmethod
-    def to_checksum(address: str) -> str:
-        """
-        Helper method to check if the ethereum address is a valid checksum address, if not then try to force
-        checksum.
-        """
-        if eth_utils.is_checksum_address(address):
-            return address
-        else:
-            return str(eth_utils.to_checksum_address(address))
-
     def get_transactions(self) -> List[Dict[str, Any]]:
         """
         Gets the transactions from Etherscan
@@ -58,7 +46,7 @@ class Component(ComponentBase):
         params = self.configuration.parameters
 
         # required parameters
-        address = self.to_checksum(params.get(KEY_ADDRESS))
+        address = params.get(KEY_ADDRESS)
         api_key = params.get(KEY_API_KEY)
 
         # optional parameters with default values

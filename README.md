@@ -63,8 +63,8 @@ Clone this repository, init the workspace and run the component with following
 command:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-git clone https://github.com/wirelessfuture/ex-etherscan-normal-transactions etherscan_normal_tx
-cd etherscan_normal_tx
+git clone https://github.com/wirelessfuture/ex-etherscan-transactions etherscan_tx
+cd etherscan_tx
 docker-compose build
 docker-compose run --rm dev
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -70,7 +70,8 @@ class Component(ComponentBase):
                 sort = params.get(KEY_SORT)
         
         es = etherscan.Client(
-            api_key=api_key
+            api_key=api_key,
+            cache_expire_after=5
         )
 
         return es.get_transactions_by_address(

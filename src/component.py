@@ -90,7 +90,7 @@ class Component(ComponentBase):
         # check for missing configuration parameters
         self.validate_configuration_parameters(REQUIRED_PARAMETERS)
 
-        # Create output table (Tabledefinition - just metadata)
+        # Create output table (Table definition - just metadata)
         table = self.create_out_table_definition('output.csv', incremental=True, primary_key=['timestamp'])
 
         # get file path of the table (data/out/tables/Features.csv)
@@ -109,7 +109,7 @@ class Component(ComponentBase):
             writer.writeheader()
             writer.writerows(transactions)
 
-        # Save table manifest (output.csv.manifest) from the tabledefinition
+        # Save table manifest (output.csv.manifest) from the table definition
         self.write_manifest(table)
 
 

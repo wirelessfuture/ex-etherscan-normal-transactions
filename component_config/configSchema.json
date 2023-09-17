@@ -2,18 +2,49 @@
   "type": "object",
   "title": "extractor configuration",
   "required": [
-    "print_hello"
+    "address",
+    "#api_key"
   ],
   "properties": {
-    "print_hello": {
-      "type": "boolean",
-      "title": "Print Hello",
+    "address": {
+      "type": "string",
+      "title": "Address",
       "propertyOrder": 1
+    },
+    "start_block": {
+      "type": "number",
+      "title": "Start Block",
+      "propertyOrder": 2
+    },
+    "end_block": {
+      "type": "number",
+      "title": "End Block",
+      "propertyOrder": 3
+    },
+    "page": {
+      "type": "number",
+      "title": "Page",
+      "propertyOrder": 4
+    },
+    "offset": {
+      "type": "number",
+      "title": "Offset",
+      "propertyOrder": 5
+    },
+    "sort": {
+      "type": "string",
+      "title": "Sort Type",
+      "propertyOrder": 6
+    },
+    "#api_key": {
+      "type": "string",
+      "title": "Etherscan API Key",
+      "propertyOrder": 7
     },
     "debug": {
       "type": "boolean",
       "title": "Debug",
-      "propertyOrder": 2
+      "propertyOrder": 8
     }
   }
 }

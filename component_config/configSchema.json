@@ -46,6 +46,16 @@
       "type": "string",
       "title": "Sort Type",
       "default": "asc",
+      "enum": [
+        "asc",
+        "desc"
+      ],
+      "options": {
+        "enum_titles": [
+          "Ascending",
+          "Descending"
+        ]
+      },
       "description": "Sort transactions by timestamp in either ascending 'asc' or descending 'desc' order.",
       "propertyOrder": 6
     },

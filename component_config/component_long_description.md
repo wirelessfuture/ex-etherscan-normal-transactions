@@ -1,0 +1,1 @@
+An extractor for getting data from the Etherscan API about normal transactions of a specific wallet address
